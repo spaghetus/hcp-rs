@@ -11,3 +11,12 @@ pub struct Header {
 	/// The features the server requires.
 	pub required: Vec<String>,
 }
+impl Default for Header {
+	fn default() -> Self {
+		Header {
+			scopes: vec![],
+			features: vec![],
+			required: vec![],
+		}
+	}
+}

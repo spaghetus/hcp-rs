@@ -18,3 +18,11 @@ impl Response {
 	/// The MIME type of the response.
 	pub const MIME_TYPE: &'static str = "application/cbor+hcpresponse";
 }
+impl Default for Response {
+	fn default() -> Self {
+		Response {
+			content: vec![],
+			extra: HashMap::new(),
+		}
+	}
+}
